@@ -13,29 +13,31 @@
       <div class="header-top__outer">
         <div class="header-top">
           <div class="header-top__settings">
-            <div id="language" class="header-top__settings-language">
-              <span class="drop-down__language" onclick="">Language:</span>
-                <ul>
-                  <li>English</li>
-                  <li>Other</li>
-                </ul>
+            <div class="header-top__settings-language">
+              <span>Language:</span>
+              <span id="language">English</span>
+                <div class="drop__content" id="drop__content-language">
+                  <a id="eng" class="drop__content-link">English</a>
+                  <a id="other" class="drop__content-link">Other</a class="drop__content-link">
+                </div>
               <span>&or;</span>
             </div>
-            <div id="currency" class="header-top__settings-currency">
-              <span  class="drop-down__currency" onclick="">Currency:</span>
-              <ul>
-                <li>USD</li>
-                <li>EUR</li>
-              </ul>
+            <div class="header-top__settings-currency">
+              <span>Currency:</span>
+              <span id="currency">USD</span>
+              <div class="drop__content" id="drop__content-currency">
+                <a id="usd" class="drop__content-link">USD</a class="drop__content-link">
+                <a id="eur" class="drop__content-link">EUR</a>
+              </div>
               <span>&or;</span>
             </div>
           </div>
           <div class="header-top__actions">
-            <a href="#" class="header-top__actions-item">Account</a>
-            <a href="#" class="header-top__actions-item">Wishlist</a>
-            <a href="#" class="header-top__actions-item">Checkout</a>
-            <a href="#" class="header-top__actions-item">Log In</a>
-            <a href="#" class="header-top__actions-item">Sign Up</a>
+            <a class="header-top__actions-item">Account</a>
+            <a class="header-top__actions-item">Wishlist</a>
+            <a class="header-top__actions-item">Checkout</a>
+            <a class="header-top__actions-item">Log In</a>
+            <a class="header-top__actions-item">Sign Up</a>
           </div>
         </div>
       </div>
@@ -44,11 +46,11 @@
           <span>LEO SHOP</span>
         </div>
         <menu class="header-bottom__menu">
-          <a href="#" class="header-bottom__menu-item">HOME</a>
-          <a href="#" class="header-bottom__menu-item">WOMEN</a>
-          <a href="#" class="header-bottom__menu-item">MEN</a>
-          <a href="#" class="header-bottom__menu-item">OTHER</a>
-          <a href="#" class="header-bottom__menu-item">PURCHASE</a>
+          <a class="header-bottom__menu-item">HOME</a>
+          <a class="header-bottom__menu-item">WOMEN</a>
+          <a class="header-bottom__menu-item">MEN</a>
+          <a class="header-bottom__menu-item">OTHER</a>
+          <a class="header-bottom__menu-item">PURCHASE</a>
         </menu>
         <div class="header-bottom__information">
           <form action="#" class="header-bottom__information-search">
@@ -63,21 +65,21 @@
             />
           </form>
           <div class="header-bottom__information-actions">
-            <a href="#"
-              ><div class="inside-image__header"><img
+            <a>
+              <div class="inside-image__header"><img
                 src="resources/sale.svg"
                 class="header-bottom__information-actions-image"
             /></div>
           </a>
-            <a href="#"
-              ><div class="inside-image__header"><img
+            <a>
+              <div class="inside-image__header"><img
                 src="resources/cart.svg"
                 class="header-bottom__information-actions-image"
             /></div>
           </a>
           </div>
           <div class="header-bottom__cart">
-            <span>CART (0)</span>
+            <span>CART (<span id="cart">0</span>)</span>
           </div>
         </div>
       </div>
@@ -93,7 +95,7 @@
               <span>experience ray-ban</span>
             </div>
           </div>
-          <img src="resources/glasses3.jpg" alt="" class="main__about-slide-image" />
+          <img src="resources/glasses3.jpg"class="main__about-slide-image" />
         </div>
         <div class="main__about-slide fade">
           <div class="inner">
@@ -104,7 +106,7 @@
               <span>THE CHROMANCE LENS CALIBRATES</span>
             </div>
           </div>
-          <img src="resources/glasses1.jpg" alt="" class="main__about-slide-image" />
+          <img src="resources/glasses1.jpg" class="main__about-slide-image" />
         </div>
         <div class="main__about-slide fade">
           <div class="inner">
@@ -115,13 +117,13 @@
               <span>SPECTRUM BRIGHTER AND CLEARER</span>
             </div>
           </div>
-          <img src="resources/glasses2.jpg" alt="" class="main__about-slide-image" />
+          <img src="resources/glasses2.jpg" class="main__about-slide-image" />
         </div>
         <div class="slider-button previous">
-          <a class="slider-button__link" onclick="plusSlide(-1)">&#10094;</a>
+          <a class="slider-button__link" id="previous">&#10094;</a>
         </div>
         <div class="slider-button next">
-          <a class="slider-button__link" onclick="plusSlide(1)">&#10095;</a class="previous">
+          <a class="slider-button__link" id="next">&#10095;</a>
         </div>
       </div>
       <div class="main__content">
@@ -130,16 +132,18 @@
             <span class="catalog__products-header">featured products</span>
             <div class="catalog__products-items">
               <div class="product">
-                <img src="resources/new.svg" alt="" class="new" />
+                <img src="resources/new.svg"class="new" />
                 <div class="product__image">
                   <img src="resources/glass1.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$380.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>380.00</span>
+                  <a  onclick="add(0)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
@@ -148,24 +152,28 @@
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$90.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>90.00</span>
+                  <a onclick="add(1)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
-                <img src="resources/sale1.svg" alt="" class="sale" />
+                <img src="resources/sale1.svg"class="sale" />
                 <div class="product__image">
                   <img src="resources/glass2.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-last-cost">$460&nbsp;</span>
-                  <span class="product__about-new-cost">$300.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-last-cost"><span class="currency">$</span>460&nbsp;</span>
+                  <span class="product__about-new-cost"><span class="currency">$</span>300.00</span>
+                  <a onclick="add(2)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
@@ -174,23 +182,27 @@
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$180.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>180.00</span>
+                  <a onclick="add(3)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
-                <img src="resources/new.svg" alt="" class="new" />
+                <img src="resources/new.svg" class="new" />
                 <div class="product__image">
                   <img src="resources/glass4.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$278.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>278.00</span>
+                  <a onclick="add(4)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
@@ -199,51 +211,59 @@
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$378.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>378.00</span>
+                  <a onclick="add(5)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
 
               <div class="product">
-                <img src="resources/new.svg" alt="" class="new" />
+                <img src="resources/new.svg" class="new" />
                 <div class="product__image">
                   <img src="resources/glass3.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$500.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>500.00</span>
+                  <a onclick="add(6)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
-                <img src="resources/sale1.svg" alt="" class="sale" />
+                <img src="resources/sale1.svg" class="sale" />
                 <div class="product__image">
                   <img src="resources/glass1.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-last-cost">$460&nbsp;</span>
-                  <span class="product__about-new-cost">$200.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-last-cost"><span class="currency">$</span>460&nbsp;</span>
+                  <span class="product__about-new-cost"><span class="currency">$</span>200.00</span>
+                  <a onclick="add(7)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
-                <img src="resources/new.svg" alt="" class="new" />
+                <img src="resources/new.svg" class="new" />
                 <div class="product__image">
                   <img src="resources/glass2.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$370.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>370.00</span>
+                  <a onclick="add(8)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -257,23 +277,27 @@
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$378.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>378.00</span>
+                  <a onclick="add(9)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
-              </div>
+              </div>    
               <div class="product">
                 <div class="product__image">
                   <img src="resources/glass4.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$278.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
-                </div>
+                  <span class="product__about-cost"><span class="currency">$</span>278.00</span>
+                  <a onclick="add(10)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a >
+                 </div>
               </div>
               <div class="product">
                 <div class="product__image">
@@ -281,10 +305,12 @@
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$188.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>188.00</span>
+                  <a onclick="add(11)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -293,42 +319,48 @@
             <span class="catalog__products-header">new products</span>
             <div class="catalog__products-items">
               <div class="product">
-                <img src="resources/new.svg" alt="" class="new" />
+                <img src="resources/new.svg" class="new" />
                 <div class="product__image">
                   <img src="resources/glass1.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$90.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>90.00</span>
+                  <a onclick="add(12)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
-                <img src="resources/new.svg" alt="" class="new" />
+                <img src="resources/new.svg"  class="new" />
                 <div class="product__image">
                   <img src="resources/glass5.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$60.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>60.00</span>
+                  <a onclick="add(13)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="product">
-                <img src="resources/new.svg" alt="" class="new" />
+                <img src="resources/new.svg" class="new" />
                 <div class="product__image">
                   <img src="resources/glass3.png" class="product__img" />
                 </div>
                 <div class="product__about">
                   <span class="product__about-name">name</span>
-                  <span class="product__about-cost">$378.00</span>
-                  <div class="inside-image__cart">
-                    <img src="resources/cart2.svg" class="product__cart" />
-                  </div>
+                  <span class="product__about-cost"><span class="currency">$</span>378.00</span>
+                  <a onclick="add(14)">
+                    <div class="inside-image__cart"><img
+                        src="resources/cart2.svg" class="product__cart"/>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -341,28 +373,28 @@
                 <div class="banner__carousel-item">
                     <span class="banner__carousel-item-text">Featured<br>glass</span>
                     <img src="resources/glassban1.jpg" class="banner__carousel-item-image">
-                    <a href="#" class="banner__carousel-item-link">Check it Out</a>
+                    <a class="banner__carousel-item-link">Check it Out</a>
                 </div>
               </div>
                <div class="banner__carousel-slide fade">
                  <div class="banner__carousel-item">
                     <span class="banner__carousel-item-text">Featured<br>glass</span class="banner__carousel-item-text">
                     <img src="resources/glassban2.jpg" class="banner__carousel-item-image">
-                    <a href="#" class="banner__carousel-item-link">Check it Out</a>
+                    <a class="banner__carousel-item-link">Check it Out</a>
                 </div>
                </div> 
                <div class="banner__carousel-slide fade">
                  <div class="banner__carousel-item">
                     <span class="banner__carousel-item-text">Featured<br>glass</span class="banner__carousel-item-text">
                     <img src="resources/glassban3.jpg" class="banner__carousel-item-image">
-                    <a href="#" class="banner__carousel-item-link">Check it Out</a>
+                    <a class="banner__carousel-item-link">Check it Out</a>
                 </div> 
                </div>                  
             </div> 
             <div class="dots">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" id="first"></span>
+              <span class="dot" id="second"></span>
+              <span class="dot" id="third"></span>
             </div>
           </div>
           <div class="main__contetn-right-subscribe">
@@ -376,7 +408,7 @@
                 class="main__contetn-right-subscribe-search"
               />
             </form>
-            <a href="#" class="main__contetn-right-subscribe-link">Subscribe</a>
+            <a class="main__contetn-right-subscribe-link">Subscribe</a>
           </div>
         </div>
       </div>
@@ -388,7 +420,6 @@
             <div class="inside-image__offers">
               <img
                 src="resources/shipping.svg"
-                alt=""
                 class="footer-offers__item-image"
               />
             </div>        
@@ -400,13 +431,12 @@
             <div class="inside-image__offers">
               <img
                 src="resources/call.svg"
-                alt=""
                 class="footer-offers__item-image"
               />
             </div>            
             <span class="footer-offers__item-text"
               >CALL US! TOLL FREE-
-              <a href="#" class="footer-offers__item-link">
+              <a class="footer-offers__item-link">
                 409-8888-0099
               </a></span
             >
@@ -420,8 +450,8 @@
               <span>FACEBOOK</span>
             </div>
             <span class="footer-about__item-text">20000 Members</span>
-            <a href="#">
-                <img src="resources/like.png" alt="" class="footer-about__item-like"></a>
+            <a>
+                <img src="resources/like.png" class="footer-about__item-like"></a>
             <div class="footer-about__item-members">
               <img src="resources/indus1.jfif" class="footer-about__item-people" />
               <img src="resources/indus2.jfif" class="footer-about__item-people" />
@@ -442,7 +472,6 @@
               <div class="inside-image__twitter">
                 <img
                   src="resources/twitter.svg"
-                  alt=""
                   class="footer-about__item-img"
                 />
               </div>
@@ -453,7 +482,6 @@
               <div class="inside-image__twitter">
                 <img
                   src="resources/twitter.svg"
-                  alt=""
                   class="footer-about__item-img"
                 />
               </div>
@@ -466,46 +494,54 @@
               <span>INFORMATION</span>
             </div>            
             <div class="footer-about__twitter">
-                <a href="#" class="footer-about__item-link">> &nbsp;dolor sit amet csecd</a>
-                <a href="#" class="footer-about__item-link">> &nbsp;repesse cillum</a>
-                <a href="#" class="footer-about__item-link">> &nbsp;dolore eu fugiat nulla</a>
-                <a href="#" class="footer-about__item-link">> &nbsp;pariatur. Excepteur</a>
-                <a href="#" class="footer-about__item-link">> &nbsp;sint occaecat cupidatat</a>
-                <a href="#" class="footer-about__item-link">> &nbsp;non proident, sunt in</a>
+                <a class="footer-about__item-link">> &nbsp;dolor sit amet csecd</a>
+                <a class="footer-about__item-link">> &nbsp;repesse cillum</a>
+                <a class="footer-about__item-link">> &nbsp;dolore eu fugiat nulla</a>
+                <a class="footer-about__item-link">> &nbsp;pariatur. Excepteur</a>
+                <a class="footer-about__item-link">> &nbsp;sint occaecat cupidatat</a>
+                <a class="footer-about__item-link">> &nbsp;non proident, sunt in</a>
             </div>
           </div>
           <div class="footer-about__item">
               <div class="footer-about__item-header">
-                <span>CONTACT US</span>
+              <span>CONTACT US</span> 
               </div>
-              <a href="#" class="footer-about__item-link">Leo Store</a>
-              <a href="#" class="footer-about__item-link">Leopards media</a>
-              <a href="#" class="footer-about__item-link">KVM Rpad, 4590GH</a>
-              <a href="#" class="footer-about__item-link">+1 489-8888-0099</a>
-              <a href="#" class="footer-about__item-link">mail@email.com</a>
+              <a class="footer-about__item-link">Leo Store</a>
+              <a class="footer-about__item-link">Leopards media</a>
+              <a class="footer-about__item-link">KVM Rpad, 4590GH</a>
+              <a class="footer-about__item-link">+1 489-8888-0099</a>
+              <a class="footer-about__item-link">mail@email.com</a>
             <div class="footer-about__item-links">
-              <a href="#">
+              <a>
                 <div class="inside-image__link">
                   <img src="resources/google.svg" class="footer-about__item-imge">
                 </div>
               </a>
-              <a href="#">
+              <a>
                 <div class="inside-image__link">
                   <img src="resources/linkedin.svg" class="footer-about__item-imge">
                 </div>
               </a>
-              <a href="#">
+              <a>
                 <div class="inside-image__link">
                   <img src="resources/wifi.svg" class="footer-about__item-imge">
                 </div>
               </a>
-              <a href="#">
+              <a>
                 <div class="inside-image__link">
                   <img src="resources/facebook.svg" class="footer-about__item-imge">
                 </div>
               </a>
             </div>
           </div>
+        </div>
+        <div class="contact" id="contact">
+          <form action="#" class="contact__form">
+            <label>Enter your FIO:<input type="text" id="contact__fio" class="contact__fio"></label>
+            <label>Enter your e-mail adress:<input id="contact__email" class="contact__email"></label>
+            <label>Enter your message<input id="contact__message" class="contact__message"></label>
+            <a id="items" class="contact__button">Send message</a>
+          </form>
         </div>
       </div>
       <div class="footer-terms__outer">
@@ -514,14 +550,13 @@
             <span>© Copyright 2013 Css Author, All rights reserved.</span>
           </div>
           <div class="footer-terms__actions">
-            <a href="#" class="footer-terms__actions-link">About Us</a>
-            <a href="#" class="footer-terms__actions-link">Delivery & Returns</a>
-            <a href="#" class="footer-terms__actions-link">Terms & Conditions</a>
-            <a href="#" class="footer-terms__actions-link">Contact Us</a>
+            <a class="footer-terms__actions-link">About Us</a>
+            <a class="footer-terms__actions-link">Delivery & Returns</a>
+            <a class="footer-terms__actions-link">Terms & Conditions</a>
+            <a id="form" class="footer-terms__actions-link">Contact Us</a>
           </div>
         </div>
       </div>
-      
     </footer>
     <script src="script.js"></script>
   </body>
