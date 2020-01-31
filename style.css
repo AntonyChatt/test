@@ -747,3 +747,33 @@ body {
     background-color: #0f5d6f;
     transition: .5s linear;
   }
+
+.content__drop-area{
+  width: 374px;
+  height: 50px;
+  color: #0b4b5a;
+  border: 3px dashed #0b4b5a;
+  background-color: #39a0b9;
+  text-align: center;
+  overflow-y: scroll; 
+
+}
+
+.hover{
+  background-color: #5cc3dc;
+  border-color: #39a0b9;
+}
+
+.error{
+  background-color: #faa;
+}
+
+.file{
+  text-align: left;
+  position: relative;
+}
+
+.cancel{
+  position: absolute;
+  right: 1px;
+}
